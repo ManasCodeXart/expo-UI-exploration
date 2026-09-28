@@ -1,65 +1,49 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
+export const darkTheme = {
+  screenBg: '#0D0D0D',
+  cardBg: '#111111',
+  textPrimary: '#FFFFFF',
+  textSecondary: '#888888',
+  progressTrack: '#3A3A3A',
+  flameCircle: '#151515',
+  flameNumber: '#6B6B6B',
+  dayBadge: '#141414',
+  iconColor: '#FFFFFF',
+  iconWrapperBg: '#1E1E1E',
+  classBarBg: '#1C1C1E',
+  convoCardBg: '#222222',
+  convoRingColor: '#FFFFFF',
+  convoRingBg: 'rgba(255,255,255,0.15)',
+  convoButtonBg: 'rgba(255,255,255,0.15)',
+  convoButtonText: '#FFFFFF',
+  convoTitleColor: '#FFFFFF',
+  skillButtonBg: 'rgba(255,255,255,0.9)',
+  skillButtonText: '#1A1A1A',
+  joinClassesButtonBg: '#F0F0F0',
+  joinClassesButtonText: '#1A1A1A',
+}
 
-import '@/global.css';
+export const lightTheme = {
+  screenBg: '#F6F6F6',
+  cardBg: '#FFFFFF',
+  textPrimary: '#1A1A1A',
+  textSecondary: '#666666',
+  progressTrack: '#E5E5E5',
+  flameCircle: '#F0F0F0',
+  flameNumber: '#CCCCCC',
+  dayBadge: '#F0F0F0',
+  iconColor: '#1A1A1A',
+  iconWrapperBg: '#EBEBEB',
+  classBarBg: '#FFFFFF',
+  convoCardBg: '#FFFFFF',
+  convoRingColor: '#AAAAAA',
+  convoRingBg: 'rgba(0,0,0,0.08)',
+  convoButtonBg: '#1A1A1A',
+  convoButtonText: '#FFFFFF',
+  convoTitleColor: '#1A1A1A',
+  skillButtonBg: 'rgba(255,255,255,0.9)',
+  skillButtonText: '#1A1A1A',
+  joinClassesButtonBg: '#F0F0F0',
+  joinClassesButtonText: '#1A1A1A',
+}
 
-import { Platform } from 'react-native';
-
-export const Colors = {
-  light: {
-    text: '#000000',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
-  },
-  dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
-  },
-} as const;
-
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
-
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
-  },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
-  },
-  web: {
-    sans: 'var(--font-display)',
-    serif: 'var(--font-serif)',
-    rounded: 'var(--font-rounded)',
-    mono: 'var(--font-mono)',
-  },
-});
-
-export const Spacing = {
-  half: 2,
-  one: 4,
-  two: 8,
-  three: 16,
-  four: 24,
-  five: 32,
-  six: 64,
-} as const;
-
-export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
-export const MaxContentWidth = 800;
+export type Theme = typeof darkTheme
