@@ -1,4 +1,4 @@
-# expo-learn-home
+# expo-Skillio-home
 
 A gesture-driven, theme-aware home screen for a language-learning app — streak flame, lessons card, level progress, skill rings, and an upcoming-class bar that morphs in from a pill. Built in React Native (Expo) as a live frontend test for Skillio.
 
